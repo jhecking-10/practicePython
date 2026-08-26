@@ -3,19 +3,19 @@ def prompt():
     while True:
         age = input("What is your age?\n")
         if int(age) <= 0:
-            print("Age cannot be zero.")
+            print("Age cannot be zero or less.")
         else:
             break
     year = input("What year is it?\n")
     return name, int(age), int(year)
 
-name, age, year = prompt()
+user_name, user_age, current_year = prompt()
 
 def calculate_year(): # returns year the user will turn 100
     years_until = 100 - age
-    return year + years_until
+    return current_year + years_until
 
 def main():
-    print(f"{name} will turn 100 in the year {calculate_year()}")
+    print(f"{name} was born in {current_year - user_age} and will turn 100 in the year {calculate_year()}")
 
 main()
