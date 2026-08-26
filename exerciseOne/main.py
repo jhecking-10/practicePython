@@ -12,10 +12,10 @@ def prompt():
 user_name, user_age, current_year = prompt()
 
 def calculate_year(): # returns year the user will turn 100
-    years_until = 100 - age
+    years_until = 100 - user_age
     return current_year + years_until
 
 def main():
-    print(f"{name} was born in {current_year - user_age} and will turn 100 in the year {calculate_year()}")
+    print(f"{user_name} was born in {current_year - user_age} and will turn 100 in the year {calculate_year()}")
 
 main()
