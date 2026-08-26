@@ -1,14 +1,21 @@
 def prompt():
     name = input("What is your name?\n")
-    age = input("What is your age?\n")
-    current_year = input("What year is it now?\n")
-    return name, age, year
+    while True:
+        age = input("What is your age?\n")
+        if int(age) <= 0:
+            print("Age cannot be zero.")
+        else:
+            break
+    year = input("What year is it?\n")
+    return name, int(age), int(year)
 
-# returns year the user will turn 100
-def calculate_year(name, age, year):
-    pass
+name, age, year = prompt()
+
+def calculate_year(): # returns year the user will turn 100
+    years_until = 100 - age
+    return year + years_until
 
 def main():
-    pass
+    print(f"{name} will turn 100 in the year {calculate_year()}")
 
 main()
