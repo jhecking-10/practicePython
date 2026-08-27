@@ -16,7 +16,7 @@ def calculate_year(): # returns year the user will turn 100
     return current_year + years_until
 
 def main():
-    print(f"{user_name} was born in {current_year - user_age} and will turn 100 in the year {calculate_year()}")
+    print(f"You ({user_name}) were born in {current_year - user_age} and will turn 100 in the year {calculate_year()}")
 
 if __name__ == "__main__":
     main()
